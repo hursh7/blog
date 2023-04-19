@@ -20,7 +20,7 @@ export default function FilterablePost({ posts, categories }: Props) {
       : posts.filter(post => post.category === selected);
 
   return (
-    <section>
+    <section className='flex m-4'>
       <PostContainer posts={filtered} />
       <Categories
         categories={[ALL_POSTS, ...categories]}
