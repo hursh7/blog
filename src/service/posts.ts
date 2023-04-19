@@ -3,7 +3,7 @@ import path from 'path';
 
 export type Post = {
   title: string;
-  desc: string;
+  description: string;
   date: Date;
   category: string;
   path: string;
@@ -20,4 +20,9 @@ export async function getAllPosts(): Promise<Post[]> {
 export async function getFeaturedPosts(): Promise<Post[]> {
   return getAllPosts() //
     .then(posts => posts.filter(post => post.featured));
+}
+
+export async function getNonFeaturedPosts(): Promise<Post[]> {
+  return getAllPosts() //
+    .then(posts => posts.filter(post => !post.featured));
 }

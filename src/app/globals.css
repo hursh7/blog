@@ -5,5 +5,10 @@
 html,
 body {
   height: 100vh;
-  overflow-y: auto;
+  /* overflow-y: auto; */
+}
+
+ul,
+li {
+  list-style: none;
 }
